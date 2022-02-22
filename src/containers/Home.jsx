@@ -1,5 +1,11 @@
 import React from 'react';
+import ImageLoader from '../components/ImageLoader';
 
 export const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <div>
+      <p>Home</p>
+      
+    </div>
+  );
 };
