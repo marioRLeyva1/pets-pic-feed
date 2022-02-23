@@ -7,7 +7,7 @@ const useInitialState = () => {
   const [results, setResults] = React.useState([]);
   const [errorAPI, setErrorAPI] = React.useState('Loanding pics...');
   const [favorites, setFavorites] = React.useState(initialState);
-
+  const [test, setTest] = React.useState("mishoa");
   const addToFavorites = (image) => {
     setFavorites({
       ...favorites,
@@ -66,6 +66,11 @@ const useInitialState = () => {
     results,
     errorAPI,
     configParams,
+    test,
+    setTest,
+    errorAPI,
+    params,
+    favorites,
   };
 };
 

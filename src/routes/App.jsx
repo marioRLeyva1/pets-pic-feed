@@ -10,9 +10,9 @@ import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
 
 export const App = () => {
-  const initialState = useInitialState();
+  const testingContext = useInitialState();
   return (
-    <AppContext.Provider value={initialState}>
+    <AppContext.Provider value={testingContext}>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
