@@ -5,9 +5,10 @@ const Pets = () => {
   return (
     <div className="pets-container">
       <div className="images-container">
-        {images.map((image) => (
+        <PetContainer></PetContainer>
+        {/* {images.map((image) => (
           <PetContainer key={url} image={image} />
-        ))}
+        ))} */}
       </div>
     </div>
   );

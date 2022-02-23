@@ -6,23 +6,23 @@ import { Dogs } from '../containers/Dogs';
 import { About } from '../containers/About';
 import { Favorites } from '../containers/Favorites';
 import { NotFound } from '../containers/NotFound';
-import { Layout } from '../components/Layout';
-import { ImageLoader } from '../components/ImageLoader';
+import AppContext from '../context/AppContext';
+import useInitialState from '../hooks/useInitialState';
 
 export const App = () => {
+  const initialState = useInitialState();
   return (
-    <ImageLoader.Consumer value={{data}}>
-        <BrowserRouter>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/cats" element={<Cats />} />
-            <Route exact path="/dogs" element={<Dogs />} />
-            <Route exact path="/favorites" element={<Favorites />} />
-            <Route exact path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-
-    </ImageLoader.Consumer>
-    );
+    <AppContext.Provider value={initialState}>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/cats" element={<Cats />} />
+          <Route exact path="/dogs" element={<Dogs />} />
+          <Route exact path="/favorites" element={<Favorites />} />
+          <Route exact path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </AppContext.Provider>
+  );
 };

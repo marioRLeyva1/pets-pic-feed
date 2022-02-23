@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import { Home } from '../containers/Home';
 
-const ImageLoader = React.createContext();
+export const MyContext = React.createContext();
 
-function ImageLoaderProvider(props) {
-
-  const [data, setData] = React.useState({
-    numberOfImages: 9,
-    pageOrigin: 1
-  })
+function ImageLoader() {
+  const [params, setParams] = React.useState([9, 1]);
   const [results, setResults] = React.useState([]);
+  const [errorAPI, setErrorAPI] = React.useState('Loanding pics...');
+  const [images, setImages] = React.useState([]);
   useEffect(() => {
-    console.log(data);
-    const url = `https://api.thecatapi.com/v1/images/search?limit=${data.numberOfImages}&page=${data.pageOrigin}&order=Rand`;
+    const url = `https://api.thecatapi.com/v1/images/search?limit=${params[0]}&page=${params[1]}&order=Rand`;
     axios({
       method: 'GET',
       url,
@@ -24,24 +22,17 @@ function ImageLoaderProvider(props) {
       .then((response) => {
         setResults(response.data);
       })
-      .catch((error) => console.error(error));
-  }, [data]);
+      .catch((error) => {
+        setErrorAPI(error);
+      });
+  }, []);
 
   if (!results) {
-    return <p>Cargando</p>;
+    console.log(errorAPI);
+  } else {
+    results.map((url) => setImages([...url, url]));
+    console.log(images);
   }
-  return (
-    <div>
-      <ImageLoader.Provider value={{data, setData, results, setResults,}}>
-        {props.children}
-      </ImageLoader.Provider>
-
-      {/* {results.map((result) => (
-        <img src={result.url} key={result.id} alt="cats" />
-      ))}
-      <p>test</p> */}
-    </div>
-  );
 }
 
-export {ImageLoader, ImageLoaderProvider};
+export default ImageLoader;
