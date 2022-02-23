@@ -18,7 +18,7 @@ const useInitialState = () => {
   const removeFromFavorites = (image) => {
     setFavorites({
       ...favorites,
-      favorites: favorites.favorites.filter((item) => item.url !== image.url),
+      favorites: favorites.favorites.filter((item) => item !== image),
     });
   };
   const configParams = (config) => {
