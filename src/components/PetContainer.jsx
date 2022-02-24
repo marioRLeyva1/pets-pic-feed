@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AppContext from '../context/AppContext';
+import FavoritesContext from '../context/FavortiesContext';
 
 const PetContainer = (props) => {
-
+  const { addToFavorites, favorites } = React.useContext (FavoritesContext)
+  const add = url => () => {
+    addToFavorites(url)
+  }
   return (
     <div className="pet-container">
       <div className="pet">
         <img src={props.src}></img>
-        <i className="fa-regular fa-heart"></i>
+        <i onClick={add(props.src)} className="fa-regular fa-heart"></i>
         <p className="fact">{props.description}</p>
       </div>
     </div>

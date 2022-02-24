@@ -6,21 +6,9 @@ const useInitialState = () => {
   const [params, setParams] = React.useState([9, 1]);
   const [results, setResults] = React.useState([]);
   const [errorAPI, setErrorAPI] = React.useState('Loanding pics...');
-  const [favorites, setFavorites] = React.useState(initialState);
-  const [test, setTest] = React.useState("mishoa");
-  const addToFavorites = (image) => {
-    setFavorites({
-      ...favorites,
-      favorites: [...favorites.favorites, image],
-    });
-  };
+  const [isFavoritesPageActive, setIsFavoritesPageActive] =
+    React.useState(false);
 
-  const removeFromFavorites = (image) => {
-    setFavorites({
-      ...favorites,
-      favorites: favorites.favorites.filter((item) => item !== image),
-    });
-  };
   const configParams = (config) => {
     setParams(config);
   };
@@ -59,18 +47,15 @@ const useInitialState = () => {
       });
   };
   return {
-    addToFavorites,
-    removeFromFavorites,
     getCatAPI,
     getDogAPI,
     results,
     errorAPI,
     configParams,
-    test,
-    setTest,
     errorAPI,
     params,
-    favorites,
+    isFavoritesPageActive,
+    setIsFavoritesPageActive,
   };
 };
 

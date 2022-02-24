@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 export const Home = () => {
+  useEffect(() => {
+    document.title = 'Home';
+  }, []);
 
   return (
     <div className="home-container">
