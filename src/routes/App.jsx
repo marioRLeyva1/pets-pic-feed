@@ -10,6 +10,7 @@ import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
 import useLocalStorage from '../hooks/useLocalStorage';
 import FavoritesContext from '../context/FavortiesContext';
+import '../styles/tailwind.css'
 
 export const App = () => {
   const context = useInitialState();

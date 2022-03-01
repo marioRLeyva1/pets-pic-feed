@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="footer-container">
-      <h2>Todos las mascotas reservadas. 2022</h2>
-    </div>
+    <footer>
+      <h2 className='text-gray-100 text-center p-2'>Todos las mascotas reservadas. 2022</h2>
+    </footer>
   );
 };
 

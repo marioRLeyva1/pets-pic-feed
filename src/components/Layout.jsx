@@ -4,7 +4,7 @@ import Header from './Header';
 
 export const Layout = ({ children }) => {
   return (
-    <div className="Layout">
+    <div className="bg-slate-700 self-center">
       <Header />
       {children}
       <Footer />

@@ -14,7 +14,7 @@ export const Dogs = () => {
     setIsFavoritesPageActive(false);
   }, []);
   useEffect(() => {
-    localStorage.setItem('images', JSON.stringify(favorites))
+    localStorage.setItem('images', JSON.stringify(favorites)) //ACTUALIZA FAVORITES Y LO ALMACENA EN LOCALSTORAGE
   },[favorites])
   return (
     <Layout>
