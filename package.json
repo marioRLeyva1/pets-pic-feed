@@ -8,7 +8,8 @@
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
-    "lint": "eslint src/ --fix"
+    "lint": "eslint src/ --fix",
+    "css-watch": "npx tailwindcss -o src/styles/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
