@@ -17,25 +17,6 @@ const useLocalStorage = () => {
     }
   }, []);
 
-  const initialState = () => {
-    const getLocalStorage = localStorage.getItem('images');
-    console.log('getLocalStorage Ejecuted');
-    const parsedLocalStorage = JSON.parse(getLocalStorage);
-    if (!parsedLocalStorage) {
-      console.log('Favorites Empty');
-      localStorage.setItem('images', JSON.stringify(favorites));
-    } else {
-      parsedLocalStorage.map((favorite) => addToFavorites(favorite));
-      setFavorites(JSON.parse(localStorage.getItem('images')));
-      console.log('Getting local favorites');
-      console.log(parsedLocalStorage);
-    }
-    if (!localStorage.images) {
-      localStorage.setItem('images', JSON.stringify(favorites));
-    } else {
-      setFavorites(JSON.parse(localStorage.images));
-    }
-  };
   useEffect(() => {
     localStorage.setItem('images', JSON.stringify(favorites));
     console.log("useEffect from useLocalStorage");

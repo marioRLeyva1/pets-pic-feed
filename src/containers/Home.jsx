@@ -5,14 +5,6 @@ import Footer from '../components/Footer';
 export const Home = () => {
   useEffect(() => {
     document.title = 'Home';
-    // const getLocalStorage = localStorage.getItem('images');
-    // console.log('getLocalStorage Ejecuted');
-    // if (!getLocalStorage) {
-    //   console.log('Favorites Empty');
-    //   localStorage.setItem('images', JSON.stringify([]));
-    // } else {
-    //   console.log("Favorites alredy exists in localStorage");
-    // }
   }, []);
 
   return (

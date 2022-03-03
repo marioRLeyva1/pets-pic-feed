@@ -12,7 +12,7 @@ const Pets = (props) => {
       <div className="pets-container">
         <div className="image-container">
           {favorites.map((element) => (
-            <img key={element} src={element}></img>
+            <PetContainer key={element} src={element}></PetContainer>
           ))}
         </div>
       </div>
@@ -25,7 +25,6 @@ const Pets = (props) => {
             <PetContainer
               key={element.url}
               src={element.url}
-              description={element.id}
             ></PetContainer>
           ))}
         </div>
