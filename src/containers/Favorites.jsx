@@ -5,12 +5,12 @@ import AppContext from '../context/AppContext';
 import FavoritesContex from '../context/FavortiesContext';
 
 export const Favorites = () => {
-  const { removeFromFavorites, isFavorites, favorites, setFavorites } = React.useContext(FavoritesContex);
-  const { setIsFavoritesPageActive } = React.useContext(AppContext);
+  const { removeFromFavorites, favorites, setFavorites } =
+    React.useContext(FavoritesContex);
+  const { setActivePage } = React.useContext(AppContext);
   useEffect(() => {
-    setIsFavoritesPageActive(true);
-    isFavorites();
     document.title = 'Favorites';
+    setActivePage('Favorites');
   }, []);
 
   return (

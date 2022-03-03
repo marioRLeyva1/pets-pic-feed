@@ -8,6 +8,7 @@ const useInitialState = () => {
   const [errorAPI, setErrorAPI] = React.useState('Loanding pics...');
   const [isFavoritesPageActive, setIsFavoritesPageActive] =
     React.useState(false);
+  const [activePage, setActivePage] = React.useState('Home');
 
   const configParams = (config) => {
     setParams(config);
@@ -56,6 +57,8 @@ const useInitialState = () => {
     params,
     isFavoritesPageActive,
     setIsFavoritesPageActive,
+    activePage,
+    setActivePage,
   };
 };
 

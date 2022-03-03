@@ -4,14 +4,14 @@ import FavoritesContext from '../context/FavortiesContext';
 import PetContainer from './PetContainer';
 
 const Pets = (props) => {
-  const { results, isFavoritesPageActive } = React.useContext(AppContext);
+  const { results, activePage } = React.useContext(AppContext);
   const { favorites } = React.useContext(FavoritesContext);
 
-  if (isFavoritesPageActive) {
+  if (activePage == 'Favorites') {
     return (
       <div className="pets-container">
         <div className="image-container">
-          {favorites.map(element => (
+          {favorites.map((element) => (
             <img key={element} src={element}></img>
           ))}
         </div>

@@ -1,9 +1,5 @@
 module.exports = {
-  content: [
-    './dist/*.html',
-    './public/*.html',
-    './src/**/*.{jsx,js}',
-  ],
+  content: ['./dist/*.html', './public/*.html', './src/**/*.{jsx,js}'],
   theme: {
     screens: {
       sm: '640px',
@@ -12,7 +8,7 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
-    extend: {    }
+    extend: {},
   },
   plugins: [],
-}
+};

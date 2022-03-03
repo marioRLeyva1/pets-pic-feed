@@ -3,10 +3,10 @@ import AppContext from '../context/AppContext';
 import FavoritesContext from '../context/FavortiesContext';
 
 const PetContainer = (props) => {
-  const { addToFavorites, favorites } = React.useContext (FavoritesContext)
-  const add = url => () => {
-    addToFavorites(url)
-  }
+  const { addToFavorites, favorites } = React.useContext(FavoritesContext);
+  const add = (url) => () => {
+    addToFavorites(url);
+  };
   return (
     <div className="pet-container">
       <div className="pet">

@@ -5,17 +5,14 @@ import AppContext from '../context/AppContext';
 import FavoritesContext from '../context/FavortiesContext';
 
 export const Dogs = () => {
-  const { getDogAPI, setIsFavoritesPageActive } = React.useContext(AppContext);
-  const {isFavorites, favorites} = React.useContext(FavoritesContext)
+  const { getDogAPI, setIsFavoritesPageActive, setActivePage } =
+    React.useContext(AppContext);
   useEffect(() => {
     getDogAPI();
-    isFavorites();
     document.title = 'Dogs';
     setIsFavoritesPageActive(false);
+    setActivePage('Dogs');
   }, []);
-  useEffect(() => {
-    localStorage.setItem('images', JSON.stringify(favorites)) //ACTUALIZA FAVORITES Y LO ALMACENA EN LOCALSTORAGE
-  },[favorites])
   return (
     <Layout>
       <div className="dog-container">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from '../containers/Home';
 import { Cats } from '../containers/Cats';
@@ -10,9 +10,10 @@ import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
 import useLocalStorage from '../hooks/useLocalStorage';
 import FavoritesContext from '../context/FavortiesContext';
-import '../styles/tailwind.css'
+import '../styles/tailwind.css';
 
 export const App = () => {
+
   const context = useInitialState();
   const favorites = useLocalStorage();
   return (
