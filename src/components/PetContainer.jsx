@@ -12,7 +12,6 @@ const PetContainer = (props) => {
       <div className="pet">
         <img src={props.src}></img>
         <i onClick={add(props.src)} className="fa-regular fa-heart"></i>
-        <FontAwesomeIcon icon="fa-duotone fa-file-arrow-down" />
       </div>
     </div>
   );
