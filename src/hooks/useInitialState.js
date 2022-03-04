@@ -3,7 +3,7 @@ import axios from 'axios';
 import initialState from '../initialState';
 
 const useInitialState = () => {
-  const [params, setParams] = React.useState([9, 1]);
+  const [params, setParams] = React.useState([15, 1]);
   const [results, setResults] = React.useState([]);
   const [errorAPI, setErrorAPI] = React.useState('Loanding pics...');
   const [isFavoritesPageActive, setIsFavoritesPageActive] =
