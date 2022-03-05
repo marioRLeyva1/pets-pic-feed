@@ -6,11 +6,11 @@ import AppContext from '../context/AppContext';
 import FavoritesContext from '../context/FavortiesContext';
 
 export const Cats = () => {
-  const { getCatAPI, setIsFavoritesPageActive, setActivePage } =
+  const { getCatAPI, setIsFavoritesPageActive, setActivePage, activePage } =
     React.useContext(AppContext);
   useEffect(() => {
     getCatAPI();
-    document.title = 'Cats';
+    document.title = 'Cats | Pets Pictures Feed';
     setIsFavoritesPageActive(false);
     setActivePage('Cats');
   }, []);
@@ -18,7 +18,7 @@ export const Cats = () => {
   return (
     <Layout>
       <h1 className='text-4xl'>Cats</h1>
-      <Pets></Pets>
+      {activePage == 'Cats' && <Pets></Pets>}
     </Layout>
   );
 };

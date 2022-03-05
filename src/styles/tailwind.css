@@ -510,11 +510,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1.25rem;
 }
 
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .flex {
   display: flex;
 }
@@ -527,20 +522,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
 }
 
-.h-screen {
-  height: 100vh;
+.h-96 {
+  height: 24rem;
 }
 
 .h-full {
   height: 100%;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
-.h-96 {
-  height: 24rem;
+.h-screen {
+  height: 100vh;
 }
 
 .w-full {
@@ -621,11 +612,6 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 
-.object-fill {
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -703,12 +689,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:scale-x-110:hover {
   --tw-scale-x: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -717,10 +697,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-gray-400:hover {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.active\:opacity-50:active {
-  opacity: 0.5;
 }
 
 .group:hover .group-hover\:block {
@@ -767,24 +743,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 5rem;
   }
 
-  .md\:w-2\/4 {
-    width: 50%;
-  }
-
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:auto-cols-auto {
-    grid-auto-columns: auto;
-  }
-
-  .md\:grid-flow-row {
-    grid-auto-flow: row;
-  }
-
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:grid-cols-3 {

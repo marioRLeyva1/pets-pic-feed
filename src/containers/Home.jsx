@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 export const Home = () => {
   useEffect(() => {
-    document.title = 'Home';
+    document.title = 'Home | Pets Pictures Feed';
   }, []);
 
   return (

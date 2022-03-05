@@ -4,13 +4,21 @@ import FavoritesContext from '../context/FavortiesContext';
 
 const PetContainer = (props) => {
   const [added, setAdded] = React.useState(false);
-  const { addToFavorites, favorites } = React.useContext(FavoritesContext);
+  const { addToFavorites, favorites, removeFromFavorites } = React.useContext(FavoritesContext);
+  const {activePage} = React.useContext(AppContext);
   const add = (url) => () => {
-    addToFavorites(url);
-    setAdded(true);
-    setTimeout(() => {
-      setAdded(false);
-    },350);
+    if(activePage == 'Favorites'){
+      removeFromFavorites(url);
+      setTimeout(() => {
+        setAdded(false);
+      },350);
+    }else{
+      addToFavorites(url);
+      setAdded(true);
+      setTimeout(() => {
+        setAdded(false);
+      },350);
+    }
   };
   return (
     <section className="flex justify-center">

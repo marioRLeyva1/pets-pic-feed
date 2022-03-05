@@ -3,7 +3,7 @@ import AppContext from '../context/AppContext';
 import FavoritesContext from '../context/FavortiesContext';
 import PetContainer from './PetContainer';
 
-const Pets = (props) => {
+const Pets = () => {
   const { results, activePage } = React.useContext(AppContext);
   const { favorites } = React.useContext(FavoritesContext);
   

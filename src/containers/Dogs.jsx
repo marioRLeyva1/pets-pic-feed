@@ -5,11 +5,11 @@ import AppContext from '../context/AppContext';
 import FavoritesContext from '../context/FavortiesContext';
 
 export const Dogs = () => {
-  const { getDogAPI, setIsFavoritesPageActive, setActivePage } =
+  const { getDogAPI, setIsFavoritesPageActive, setActivePage, activePage } =
     React.useContext(AppContext);
   useEffect(() => {
     getDogAPI();
-    document.title = 'Dogs';
+    document.title = 'Dogs | Pets Pictures Feed';
     setIsFavoritesPageActive(false);
     setActivePage('Dogs');
   }, []);
@@ -17,7 +17,7 @@ export const Dogs = () => {
     <Layout>
       <div className="dog-container">
         <h1>Dogs</h1>
-        <Pets></Pets>
+        {activePage == 'Dogs' && <Pets></Pets>}
       </div>
     </Layout>
   );

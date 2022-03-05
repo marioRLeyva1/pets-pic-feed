@@ -25,12 +25,14 @@ const useLocalStorage = () => {
   const addToFavorites = (image) => {
     setFavorites([...favorites, image]);
   };
-
+  
+  let newFavorites = favorites;
   const removeFromFavorites = (image) => {
-    setFavorites({
-      ...favorites,
-      favorites: favorites.favorites.filter((item) => item !== image),
-    });
+    const index = favorites.indexOf(image);
+    console.log('removing...');
+    setFavorites(newFavorites.splice(index, 1));
+    console.log(favorites);
+    // setFavorites(favorites.splice(index, 1));
   };
 
   return {

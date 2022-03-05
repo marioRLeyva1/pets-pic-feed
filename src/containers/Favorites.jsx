@@ -7,9 +7,9 @@ import FavoritesContex from '../context/FavortiesContext';
 export const Favorites = () => {
   const { removeFromFavorites, favorites, setFavorites } =
     React.useContext(FavoritesContex);
-  const { setActivePage } = React.useContext(AppContext);
+  const { setActivePage, activePage } = React.useContext(AppContext);
   useEffect(() => {
-    document.title = 'Favorites';
+    document.title = 'Favorites | Pets Picture Feed';
     setActivePage('Favorites');
   }, []);
 
@@ -17,7 +17,7 @@ export const Favorites = () => {
     <Layout>
       <div className="favorites-container">
         <h1>Favorites</h1>
-        <Pets></Pets>
+        {activePage == 'Favorites' && <Pets></Pets>}
       </div>
     </Layout>
   );
