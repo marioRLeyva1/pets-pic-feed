@@ -17,7 +17,6 @@ export const Cats = () => {
 
   return (
     <Layout>
-      <h1 className='text-4xl'>Cats</h1>
       {activePage == 'Cats' && <Pets></Pets>}
     </Layout>
   );

@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 bg-slate-800 w-full h-auto md:h-36 md:flex md:justify-center">
+    <header className="sticky z-10 top-0 bg-slate-800 w-full h-auto md:h-36 md:flex md:justify-center">
       <section className="md:w-4/6 md:flex md:justify-between items-center">
         <div className="flex flex-col justify-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl text-gray-400 md:text-gray-100 text-center md:text-left hover:text-gray-400">

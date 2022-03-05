@@ -9,6 +9,7 @@ const useInitialState = () => {
   const [isFavoritesPageActive, setIsFavoritesPageActive] =
     React.useState(false);
   const [activePage, setActivePage] = React.useState('Home');
+  const [openModal, setOpenModal] = React.useState(false);
 
   const configParams = (config) => {
     setParams(config);
@@ -59,6 +60,8 @@ const useInitialState = () => {
     setIsFavoritesPageActive,
     activePage,
     setActivePage,
+    openModal,
+    setOpenModal,
   };
 };
 

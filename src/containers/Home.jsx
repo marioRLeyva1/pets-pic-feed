@@ -13,14 +13,14 @@ export const Home = () => {
         Pets Pictures Feed
       </h1>
       <section className="flex justify-center w-full h-screen">
-        <div className="w-4/6 flex-col md:flex md:h-80 md:flex-row justify-center self-center">
+        <div className="w-4/6 flex-col sm:flex sm:h-80 sm:flex-row justify-center self-center">
           <Link to={'/cats'} className="group md:w-full mx-5 hover:scale-110 transition">
             <img
               src="https://media.wired.co.uk/photos/60c8730fa81eb7f50b44037e/3:2/w_3329,h_2219,c_limit/1521-WIRED-Cat.jpeg"
               alt="cat"
               className="rounded h-full w-full object-cover group-hover:opacity-50 transition"
             />
-            <h2 className='absolute top-1/2 w-full z-10 hidden group-hover:block text-white text-4xl transition'>Cats</h2>
+            <h2 className='absolute top-1/2 w-full z-10 hidden md:group-hover:block text-white text-4xl transition'>Cats</h2>
           </Link>
           <Link to={'/dogs'} className="group md:w-full mx-5 md:h-80 hover:scale-110 transition">
             <img
@@ -28,7 +28,7 @@ export const Home = () => {
               alt="dog"
               className="rounded h-full w-full object-cover group-hover:opacity-50 transition"
             />
-            <h2 className='absolute top-1/2 w-full z-10 hidden group-hover:block text-white text-4xl transition'>Dogs</h2>
+            <h2 className='absolute top-1/2 w-full z-10 hidden md:group-hover:block text-white text-4xl transition'>Dogs</h2>
           </Link>
         </div>
       </section>
