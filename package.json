@@ -9,7 +9,8 @@
     "build": "webpack --mode production",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/ --fix",
-    "css-watch": "npx tailwindcss -o src/styles/tailwind.css --watch"
+    "css-watch": "npx tailwindcss -o src/styles/tailwind.css --watch",
+    "deploy": "webpack --mode production && firebase deploy"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
+    "firebase": "^9.6.8",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

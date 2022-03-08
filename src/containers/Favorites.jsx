@@ -16,7 +16,6 @@ export const Favorites = () => {
   return (
     <Layout>
       <div className="favorites-container">
-        <h1>Favorites</h1>
         {activePage == 'Favorites' && <Pets></Pets>}
       </div>
     </Layout>

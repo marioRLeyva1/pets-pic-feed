@@ -16,7 +16,6 @@ export const Dogs = () => {
   return (
     <Layout>
       <div className="dog-container">
-        <h1>Dogs</h1>
         {activePage == 'Dogs' && <Pets></Pets>}
       </div>
     </Layout>
