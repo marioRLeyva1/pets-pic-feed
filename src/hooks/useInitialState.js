@@ -3,7 +3,7 @@ import axios from 'axios';
 import initialState from '../initialState';
 
 const useInitialState = () => {
-  const [params, setParams] = React.useState([15, 1]);
+
   const [results, setResults] = React.useState([]);
   const [errorAPI, setErrorAPI] = React.useState('Loanding pics...');
   const [isFavoritesPageActive, setIsFavoritesPageActive] =
@@ -11,11 +11,8 @@ const useInitialState = () => {
   const [activePage, setActivePage] = React.useState('Home');
   const [openModal, setOpenModal] = React.useState(false);
 
-  const configParams = (config) => {
-    setParams(config);
-  };
   const getCatAPI = () => {
-    const url = `https://api.thecatapi.com/v1/images/search?limit=${params[0]}&page=${params[1]}&order=Rand`;
+    const url = `https://api.thecatapi.com/v1/images/search?limit=15&page=${Math.floor(Math.random() * 100)}&order=Rand`;
     axios({
       method: 'GET',
       url,
@@ -32,7 +29,7 @@ const useInitialState = () => {
       });
   };
   const getDogAPI = () => {
-    const url = `https://api.thedogapi.com/v1/images/search?limit=${params[0]}&page=${params[1]}&order=Rand`;
+    const url = `https://api.thedogapi.com/v1/images/search?limit=15&page=${Math.floor(Math.random() * 100)}&order=Rand`;
     axios({
       method: 'GET',
       url,
@@ -53,9 +50,7 @@ const useInitialState = () => {
     getDogAPI,
     results,
     errorAPI,
-    configParams,
     errorAPI,
-    params,
     isFavoritesPageActive,
     setIsFavoritesPageActive,
     activePage,

@@ -15,6 +15,7 @@ export const Favorites = () => {
 
   return (
     <Layout>
+      <h5 className='text-center text-white pt-4'>Double tap to remove from Favorites</h5>
       <div className="favorites-container">
         {activePage == 'Favorites' && <Pets></Pets>}
       </div>
