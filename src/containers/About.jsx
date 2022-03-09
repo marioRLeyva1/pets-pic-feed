@@ -17,6 +17,12 @@ export const About = () => {
           <li>Bug fixes</li>
         </ul>
       </section>
+      <section>
+        <h5>v1.0.3</h5>
+        <ul>
+          <li>API results from a random page in range 1-100</li>
+        </ul>
+      </section>
     </div>
   );
 };

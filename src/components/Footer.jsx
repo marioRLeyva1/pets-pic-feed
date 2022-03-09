@@ -8,7 +8,7 @@ const Footer = () => {
       <h2 className="text-gray-100 text-center w-full">
         Todos las mascotas reservadas. 2022.
       </h2>
-        <h2 className='text-gray-100 text-center w-full'>v1.0.2</h2>
+        <h2 className='text-gray-100 text-center w-full'>v1.0.3</h2>
     </footer>
   );
 };
