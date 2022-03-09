@@ -13,8 +13,10 @@ export const Dogs = () => {
     setIsFavoritesPageActive(false);
     setActivePage('Dogs');
   }, []);
+
   return (
     <Layout>
+      <h5 className='text-center text-white pt-4'>Double tap to add to Favorites</h5>
       <div className="dog-container">
         {activePage == 'Dogs' && <Pets></Pets>}
       </div>

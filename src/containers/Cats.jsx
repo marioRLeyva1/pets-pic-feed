@@ -17,6 +17,7 @@ export const Cats = () => {
 
   return (
     <Layout>
+      <h5 className='text-center text-white pt-4'>Double tap to add to Favorites</h5>
       {activePage == 'Cats' && <Pets></Pets>}
     </Layout>
   );
